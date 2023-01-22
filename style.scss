@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: grey;
+  padding: 11rem;
+}
+.progress {
+  width: 70rem;
+  height: 40rem;
+  background-color: white;
+  margin: 0 auto;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(97, 96, 96, 0.8),
+    -0.5rem -0.5rem 1rem rgba(8, 8, 8, 0.8),
+    inset 0.5rem 0.5rem 1rem rgba(8, 8, 8, 0.8),
+    inset -0.5rem -0.5rem 1rem rgba(97, 96, 96, 0.8);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__circle {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(8, 8, 8, 0.8),
+      inset -0.5rem -0.5rem 1rem rgba(97, 96, 96, 0.8);
+    display: inline-block;
+    position: relative;
+  }
+  &__text {
+    text-align: center;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    font-family: aldrich;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    z-index: 1;
+    background-color: transparent;
+  }
+  &__dot {
+    height: 11rem;
+    width: 11rem;
+    background-color: var(--bg);
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    animation: bg 1s forwards;
+    &-outer {
+      height: 10rem;
+      width: 10rem;
+      background-color: white;
+      position: absolute;
+      animation: forward 2s forwards ease-out;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 1), inset 0 0 1rem rgba(0, 0, 0, 1);
+      &::after {
+        content: "";
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: var(--bg);
+        position: absolute;
+        border-radius: 50%;
+        z-index: 100;
+        left: 4rem;
+        top: -0.9rem;
+      }
+    }
+  }
+}
+
+@keyframes forward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(var(--deg));
+  }
+}
+@keyframes bg {
+  from {
+  }
+
+  to {
+  }
+}
+
+// second circle bar
+
+.circle {
+  height: 13rem;
+  width: 13rem;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
+
+  &__left,
+  &__right {
+    height: 100%;
+    width: 50%;
+    // background-color: green;
+    position: absolute;
+    border: 1rem solid var(--bg);
+    border-right: 0;
+    border-radius: 10rem 0 0 10rem;
+    transform-origin: right;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+    font-family: arial;
+    font-size: 2rem;
+  }
+  &__outer {
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+  }
+  &__left {
+    animation: left 1s linear forwards;
+  }
+  &__right {
+    animation: right 0.8s linear forwards 1s;
+  }
+  &__overlay {
+    height: 80%;
+    width: 80%;
+    background-color: var(--bg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: inset 0 0 1rem rgba(0, 0, 0, 1);
+    transform: translate(-50%, -50%);
+    z-index: 600;
+    border-radius: 50%;
+  }
+}
+
+@keyframes left {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(var(--deg));
+  }
+}
+@keyframes right {
+  from {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  to {
+    z-index: 100;
+    transform: rotate(var(--deg));
+  }
+}

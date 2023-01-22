@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circle bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="progress">
+      <section class="progress__circle">
+        <p
+          class="progress__dot"
+          style="--bg: green; --wd: 60%; --deg: 120deg"
+        ></p>
+        <p
+          class="progress__dot-outer"
+          style="--bg: green; --wd: 60%; --deg: 120deg"
+        ></p>
+        <p class="progress__text">Html</p>
+      </section>
+      <section class="progress__circle">
+        <p
+          class="progress__dot"
+          style="--bg: purple; --wd: 75%; --deg: 180deg"
+        ></p>
+        <p
+          class="progress__dot-outer"
+          style="--bg: purple; --wd: 75%; --deg: 180deg"
+        ></p>
+        <p class="progress__text">javascript</p>
+      </section>
+      <section class="progress__circle">
+        <p
+          class="progress__dot"
+          style="--bg: skyBlue; --wd: 50%; --deg: 270deg"
+        ></p>
+        <p
+          class="progress__dot-outer"
+          style="--bg: skyBlue; --wd: 50%; --deg: 270deg"
+        ></p>
+        <p class="progress__text">css</p>
+      </section>
+    </div>
+
+    <div class="progress">
+      <div class="circle">
+        <span class="circle__text">65%</span>
+        <div class="circle__outer"></div>
+        <div class="circle__left" style="--deg: 180deg; --bg: green"></div>
+        <div class="circle__right" style="--deg: 234deg; --bg: green"></div>
+        <div class="circle__overlay" style="--bg: green"></div>
+      </div>
+      <div class="circle">
+        <span class="circle__text">80%</span>
+        <div class="circle__outer"></div>
+        <div class="circle__left" style="--deg: 180deg; --bg: purple"></div>
+        <div class="circle__right" style="--deg: 288deg; --bg: purple"></div>
+        <div class="circle__overlay" style="--bg: purple"></div>
+      </div>
+      <div class="circle">
+        <span class="circle__text">90%</span>
+        <div class="circle__outer"></div>
+        <div class="circle__left" style="--deg: 180deg; --bg: skyBlue"></div>
+        <div class="circle__right" style="--deg: 324deg; --bg: skyBlue"></div>
+        <div class="circle__overlay" style="--bg: skyBlue"></div>
+      </div>
+    </div>
+  </body>
+</html>
