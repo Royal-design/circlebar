@@ -1,11 +1,8 @@
 # NEW WEBSITE TEMPLATE
 
-## This is to show a demo on how push into github
+## This is a demo site for circle bar
 
-# STEPS IN CREATING LINKING GITHUN TO GIT
-
-- copy the ssh link
-- clone it in your git prompt
+# The code are well written and organized
 
 ## Check out this link to access it
 
